@@ -113,6 +113,15 @@ def aggregate(df: pd.DataFrame, verbose=False) -> pd.DataFrame:
     if verbose: print('▮', end='')
     
     if verbose: print()
+    
+    ## Adding missed columns
+    features = joblib.load('features.pkl')
+    missed = list(set(features) - set(df_agg.columns))
+    if missed:
+        df_agg.loc[:, missed] = 0
+        df_agg = df_agg[features]
+    if verbose: print(f"Added {len(missed)} missed columns")
+    
+    
     if verbose: print(f"Aggregation completed. Result shape: {df_agg.shape}")
-        
     return df_agg
