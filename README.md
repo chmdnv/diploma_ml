@@ -1,6 +1,6 @@
 # Credit Risk Management Model
 ## Learning Project for Skillbox ML-junior
-The project solved the problem of assessing risk of client's default, based on credit history data
+The project solved the problem of predicting risk of client's default, based on credit history data
 
 Used data from https://www.kaggle.com/datasets/mikhailkostin/dlfintechbki<br>
 <br>
@@ -27,4 +27,4 @@ Final accuracy of the best model on the test sample:
 ## Launch
 Final pipeline **model/pipe_11.pkl**<br>
 Import all the functions from jupyter/pipe_utils.py<br>
-To deserialize the *pipe_11* model use dill (see example i *pipeline_test.ipynb*)
+To deserialize the *pipe_11* model use dill (see example in *pipeline_test.ipynb*)
