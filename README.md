@@ -1,29 +1,30 @@
-# Модель кредитного риск-менеджмента
-## Учебный проект для Skillbox ML-junior
+# Credit Risk Management Model
+## Learning Project for Skillbox ML-junior
+The project solved the problem of assessing risk of client's default, based on credit history data
 
-Основан на данных https://www.kaggle.com/datasets/mikhailkostin/dlfintechbki<br>
+Used data from https://www.kaggle.com/datasets/mikhailkostin/dlfintechbki<br>
 <br>
-В ходе моделирования было опробовано 3 модели обучения: LightGBM, HistGradientBoosting и нейронная сеть, реализованная на pytorch<br>
+3 prediction models were tested: LightGBM, HistGradientBoosting and a neural network implemented on Pytorch<br>
 <br>
-Итоговая точность лучшей модели на тестовой выборке по метрике roc-auc:
-0.7625
+Final accuracy of the best model on the test sample:
+0.7625 (roc-auc)
 
-## Содержание проекта
-**/data** - данные для проекта (загрузить из источника)
-* test_predict.csv - предикты для данных из test_data
+## Project content
+**/data** -  project data (download from source)
+* test_predict.csv - predicted values for test_data
 
-**/jupyter** - jupyter-notebook файлы:
-* collect - загрузка и агрегация данных
-* modeling - выбор модели (LightGBM, HistGradient)
-* modeling_mlp - нейросеть на pytorch
-* pipeline - формирование пайплайна с итоговой моделью
-* pipeline_test - тестовый предикт на пайплайне
-* pipe_utils.py - утилиты и классы для работы пайплайна
-* features.pkl - список итоговых фич модели
+**/jupyter** - jupyter-notebook files:
+* collect - data loading and aggregation
+* modeling - model selection (LightGBM, HistGradient)
+* modeling_mlp - Pytorch neural network
+* pipeline - creating a pipelines with the final model
+* pipeline_test - test predict on the pipeline
+* pipe_utils.py - utilities and classes for work of the pipelines
+* features.pkl - list of final features of the model
 
-**/model** - файлы с моделями
+**/model** - dumped model files
 <br><br>
-## Запуск
-Итоговый пайплайн **model/pipe_11.pkl**<br>
-Для запуска необходимо импортировать все функции из jupyter/pipe_utils.py<br>
-Для десериализации модели *pipe_11* использовать dill (см. пример в *pipeline_test.ipynb*)
+## Launch
+Final pipeline **model/pipe_11.pkl**<br>
+Import all the functions from jupyter/pipe_utils.py<br>
+To deserialize the *pipe_11* model use dill (see example i *pipeline_test.ipynb*)
